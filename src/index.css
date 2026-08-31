@@ -1,0 +1,106 @@
+:root {
+  --bg-primary: #0f0f1a;
+  --bg-secondary: #1a1a2e;
+  --card-bg: #1a1a2e;
+  --input-bg: #2a2a3e;
+  --hover-bg: #3a3a4e;
+  --accent-color: #6366f1;
+  --accent-bg: rgba(99, 102, 241, 0.15);
+  --header-bg: #1a1a2e;
+  --sidebar-bg: #1a1a2e;
+  --border-color: #333;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --status-online: #10b981;
+  --status-offline: #ef4444;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #fff;
+  --card-bg: #fff;
+  --input-bg: #f1f5f9;
+  --hover-bg: #e2e8f0;
+  --accent-color: #6366f1;
+  --accent-bg: rgba(99, 102, 241, 0.1);
+  --header-bg: #fff;
+  --sidebar-bg: #fff;
+  --border-color: #e2e8f0;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+::selection {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-primary: #0f0f1a;
+    --bg-secondary: #1a1a2e;
+    --card-bg: #1a1a2e;
+    --input-bg: #2a2a3e;
+    --hover-bg: #3a3a4e;
+    --accent-color: #6366f1;
+    --accent-bg: rgba(99, 102, 241, 0.15);
+    --header-bg: #1a1a2e;
+    --sidebar-bg: #1a1a2e;
+    --border-color: #333;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+  }
+}
